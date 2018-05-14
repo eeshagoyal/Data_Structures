@@ -13,12 +13,13 @@ void bubblesort(int arr[],int n);
 
 int main() {
 
-	int arr[] = {64,34, 25, 12, 22, 11,90,100,120};
-	int n = sizeof(arr)/sizeof(arr[0]);;
-	displayarray(arr,n);
-	
 	int choice, ch=1;
+
 	do{
+		int arr[] = {64,34, 25, 12, 22, 11,90,100,120};
+		int n = sizeof(arr)/sizeof(arr[0]);;
+		displayarray(arr,n);
+	
 		printf("\n\n-------------- Sorting Array ---------------\n");
 		printf("1. Selection Sort.\n");
 		printf("2. Insertion Sort.\n");
@@ -91,6 +92,8 @@ void selectionsort(int arr[],int n)
 					min=j;
 
 		swap(&arr[min],&arr[i]); // swap after identifying min in UNSORTED array
+		displayarray(arr,n);
+		printf("\n\n");
 	}
 }
 
@@ -133,6 +136,9 @@ void bubblesort(int arr[],int n)
 		    }
 		}
 
+		displayarray(arr,n);
+		printf("\n\n");
+
 		if (flag==0)
 		  	break;	
 	}
@@ -158,6 +164,8 @@ void insertionsort(int arr[],int n)
 			hole--;
 		}
 		arr[hole]= value;
+		displayarray(arr,n);
+		printf("\n\n");
 	}
 	
 }
